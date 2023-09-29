@@ -57,6 +57,10 @@ section {
     color: #fff;
     padding: 30px;
 }
+.about-me {
+    color: red;
+    font-weight: bold;
+}
 section h2::before {
     content: "."; /* Unicode for a Font Awesome icon */
     margin-right: 10px;
