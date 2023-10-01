@@ -9,10 +9,15 @@
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <script src="../javascript/script.js"></script>
+
+
+
+  <script src="../javascript/script.js"></script>
+
     <header>
         <img src="../media/logo.png" alt="Website Logo">
         <div class="Header"><h1>My Projects</h1></div>
@@ -40,7 +45,83 @@
         </ul>
 
     </section>
+
+
+
+<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="https://picsum.photos/id/3/800/400" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="https://picsum.photos/id/2/800/400" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="https://picsum.photos/id/5/800/400" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="https://picsum.photos/id/4/800/400" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span style="color: #ffffff;" class="close cursor" onclick="closeModal()">Close</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://picsum.photos/id/3/1600/800" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://picsum.photos/id/2/1600/800" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://picsum.photos/id/5/1600/800" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://picsum.photos/id/4/1600/800" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="https://picsum.photos/id/3/800/400" onclick="currentSlide(1)" alt="Project1">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://picsum.photos/id/2/800/400" onclick="currentSlide(2)" alt="Project2">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://picsum.photos/id/5/800/400" onclick="currentSlide(3)" alt="Project3">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://picsum.photos/id/4/800/400" onclick="currentSlide(4)" alt="Project3">
+    </div>
+  </div>
+</div>
     
+
+
+
+
+
     <footer>
         <h2>Stay Connected</h2>
         <p>
