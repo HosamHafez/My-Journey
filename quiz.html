@@ -14,7 +14,7 @@
 <body>
     <header>
         <img src="./media/logo.png" alt="Website Logo">
-        <div class="Header"><h1>Contact Me</h1></div>
+        <div class="Header"><h1>Quiz</h1></div>
         <h2>Hosam Hafez</h2>
     </header>
 
@@ -29,15 +29,21 @@
     </nav>
 
     
-    <section id="contact-me">
-    <h3><i class="fa-solid fa-file-signature fa-fade fa-lg"></i>&nbsp;&nbsp;&nbsp;Conact us</h3>
-    <form class="contact" action="/submit_contact" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message">
-    </form>
+    <section id="quiz-container">
+        <h1>Quiz Time</h1>
+        <div class="question">
+            <p></p>
+        </div>
+        <div class="options">
+        </div>
+        <button id="submit">Submit</button>
+        <div class="feedback"></div>
+        <button id="refresh" style="display: none;">Refresh</button>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./javascript/quizscript.js"></script>
+
     <footer>
         <h2>Stay Connected</h2>
         <p>
@@ -48,3 +54,5 @@
     </footer>
 </body>
 </html>
+
+

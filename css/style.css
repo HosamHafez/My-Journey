@@ -153,3 +153,79 @@ a:link {
     font-size: 70%;
     text-align: center;
   }
+
+
+  
+.quiz-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#quiz-container {
+    width: 35%;
+    text-align: center;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.options label {
+    color: white;
+    display: block;
+    padding: 8px;
+    margin: 5px;
+    background-color: #ff5500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options label:hover {
+    background-color: #ffb38d;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+.Passed {
+    color: green;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.Failed {
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+#submit {
+    color: white;
+    background-color: #ff5500;
+    display: block;
+    margin: 20px auto;
+}
+
+#refresh {
+    color: white;
+    background-color: #ff5500;
+    display: block;
+    margin: 20px auto;
+}
