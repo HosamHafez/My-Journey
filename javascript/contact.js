@@ -2,6 +2,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById("contact-form");
     const submitButton = document.getElementById("submit-button");
     const successMessage = document.getElementById("success-message");
+    const messageInput = contactForm.querySelector('textarea[name="message"]');
+    const characterCounter = document.getElementById("character-counter");
+
+    function updateCharacterCount() {
+        const message = messageInput.value;
+        let currentCount = message.length;
+        
+        if (currentCount > 1001) {
+            messageInput.value = message.substr(0, 1001); // Truncate the message to the maximum allowed characters
+            currentCount = 1001;
+        }
+        characterCounter.textContent = currentCount + " / 1000"; // Update character count display
+
+    }
+
+    messageInput.addEventListener("input", function() {
+        updateCharacterCount();
+        validateForm(); // Trigger form validation after character count update
+    });
 
     // Validation functions
     function validateName() {
@@ -14,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nameInput.style.border = "1px solid red";
             return false;
         }
-        else if (/^\d+$/.test(nameInput.value)) {
+        else if (!/^\D+$/.test(nameInput.value)) {
             errorDiv.textContent = "Name cannot contain numbers";
             nameInput.style.border = "1px solid red";
             return false;
@@ -48,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (messageInput.value.trim() === "") {
             errorDiv.textContent = "Message is required";
+            messageInput.style.border = "1px solid red";
+            return false;
+        }  else if (messageInput.value.length >= 1001) {
+            errorDiv.textContent = "Maximum character limit is 1000";
             messageInput.style.border = "1px solid red";
             return false;
         } else {
