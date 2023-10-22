@@ -30,13 +30,27 @@
 
     
     <section id="contact-me">
-    <h3><i class="fa-solid fa-file-signature fa-fade fa-lg"></i>&nbsp;&nbsp;&nbsp;Conact us</h3>
-    <form class="contact" action="/submit_contact" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message">
-    </form>
+        <h3><i class="fa-solid fa-file-signature fa-fade fa-lg"></i>&nbsp;&nbsp;&nbsp;Contact us</h3>
+        <form class="contact" action="/submit_contact" method="POST" id="contact-form">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <div class="error-message" id="name-error"></div>
+
+
+                <input type="email" name="email" placeholder="Your Email" required>
+                <div class="error-message" id="email-error"></div>
+
+
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <div class="error-message" id="message-error"></div>
+
+                <div id="success-message">
+                    Your message has been sent successfully.
+                </div>
+
+            <input type="submit" value="Send Message" id="submit-button" disabled>
+        </form>
+
     </section>
     <footer>
         <h2>Stay Connected</h2>
@@ -46,5 +60,6 @@
         <a href="https://www.example.com/newsletter-signup" class="btn btn-primary">Sign Up Now</a>
         <p>&copy; 2023 Hosam Hafez | All rights reserved.</p>
     </footer>
+    <script src="./javascript/contact.js"></script>
 </body>
 </html>

@@ -116,6 +116,7 @@ a:link {
 .contact textarea {
     resize: vertical;
     height: 150px;
+    width: 50%;
 }
 .contact input[type="submit"] {
     cursor: pointer;
@@ -228,4 +229,14 @@ h1 {
     background-color: #ff5500;
     display: block;
     margin: 20px auto;
+}
+
+#success-message {
+    width: 50%;
+    background-color: white;
+    color: green;
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
